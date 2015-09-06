@@ -10,7 +10,7 @@ import java.util.List;
 @Dao
 public interface HouseDao {
 
-    @Select(strategy = SelectType.STREAM)
+    @Select
     List<House> findAll();
 
     @Select(ensureResult = true)
