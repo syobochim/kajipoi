@@ -19,7 +19,7 @@ import java.time.LocalDate;
 public class Work {
     private Id memberId;
     private Id houseworkId;
-    private LocalDate wordData;
+    private LocalDate workData;
 
     private Status status;
 }
