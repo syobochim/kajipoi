@@ -1,7 +1,8 @@
 package com.kajipoi.entity;
 
 import com.kajipoi.domain.Name;
-import lombok.Data;
+import lombok.Value;
+import lombok.experimental.Accessors;
 import org.seasar.doma.Entity;
 import org.seasar.doma.GeneratedValue;
 import org.seasar.doma.GenerationType;
@@ -14,13 +15,14 @@ import org.seasar.doma.jdbc.entity.NamingType;
  * @author syobochim
  * @since 1.0
  */
-@Entity(naming = NamingType.LOWER_CASE)
-@Data
+@Entity(naming = NamingType.LOWER_CASE, immutable = true)
+@Value(staticConstructor = "of")
+@Accessors(fluent = true)
 public class House {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Id houseId;
+    private final Id houseId;
 
-    private Name houseName;
+    private final Name houseName;
 }
 

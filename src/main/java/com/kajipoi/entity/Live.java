@@ -1,9 +1,10 @@
 package com.kajipoi.entity;
 
 import com.kajipoi.domain.Id;
-import lombok.Builder;
-import lombok.Data;
+import lombok.Value;
+import lombok.experimental.Accessors;
 import org.seasar.doma.Entity;
+import org.seasar.doma.jdbc.entity.NamingType;
 
 /**
  * 居住イベントを表すエンティティ。
@@ -11,10 +12,10 @@ import org.seasar.doma.Entity;
  * @author syobochim
  * @since 1.0
  */
-@Entity
-@Builder
-@Data
+@Entity(naming = NamingType.LOWER_CASE, immutable = true)
+@Value(staticConstructor = "of")
+@Accessors(fluent = true)
 public class Live {
-    private Id houseId;
-    private Id memberId;
+    private final Id houseId;
+    private final Id memberId;
 }
