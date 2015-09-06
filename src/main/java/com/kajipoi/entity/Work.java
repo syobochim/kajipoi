@@ -6,6 +6,8 @@ import lombok.Data;
 import org.seasar.doma.Entity;
 import org.seasar.doma.jdbc.entity.NamingType;
 
+import java.time.LocalDate;
+
 /**
  * 仕事イベントを表すエンティティ。
  *
@@ -17,6 +19,7 @@ import org.seasar.doma.jdbc.entity.NamingType;
 public class Work {
     private Id memberId;
     private Id houseworkId;
+    private LocalDate wordData;
 
     private Status status;
 }
