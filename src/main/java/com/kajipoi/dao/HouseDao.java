@@ -16,9 +16,6 @@ public interface HouseDao {
     @Select(ensureResult = true)
     House findById(Id houseId);
 
-    @Select(ensureResult = true)
-    House findByHouseName(Name houseName);
-
     @Insert
     int save(House house);
 
