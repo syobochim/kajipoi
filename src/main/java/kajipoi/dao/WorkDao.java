@@ -1,8 +1,8 @@
-package com.kajipoi.dao;
+package kajipoi.dao;
 
-import com.kajipoi.domain.Id;
-import com.kajipoi.domain.Status;
-import com.kajipoi.entity.Work;
+import kajipoi.domain.Id;
+import kajipoi.domain.Status;
+import kajipoi.entity.Work;
 import org.seasar.doma.Delete;
 import org.seasar.doma.Insert;
 import org.seasar.doma.Select;

@@ -1,7 +1,7 @@
-package com.kajipoi.dao;
+package kajipoi.dao;
 
-import com.kajipoi.domain.Id;
-import com.kajipoi.entity.Member;
+import kajipoi.domain.Id;
+import kajipoi.entity.Member;
 import org.seasar.doma.Dao;
 import org.seasar.doma.Delete;
 import org.seasar.doma.Insert;

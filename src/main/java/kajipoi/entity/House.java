@@ -1,6 +1,6 @@
-package com.kajipoi.entity;
+package kajipoi.entity;
 
-import com.kajipoi.domain.Name;
+import kajipoi.domain.Name;
 import lombok.Value;
 import lombok.experimental.Accessors;
 import org.seasar.doma.Entity;

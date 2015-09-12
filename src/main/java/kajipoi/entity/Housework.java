@@ -1,6 +1,6 @@
-package com.kajipoi.entity;
+package kajipoi.entity;
 
-import com.kajipoi.domain.Name;
+import kajipoi.domain.Name;
 import lombok.Value;
 import lombok.experimental.Accessors;
 import org.seasar.doma.Entity;
@@ -10,7 +10,7 @@ import org.seasar.doma.Id;
 import org.seasar.doma.jdbc.entity.NamingType;
 
 /**
- * メンバーリソースを表すエンティティ。
+ * 家事リソースを表すエンティティ。
  *
  * @author syobochim
  * @since 1.0
@@ -18,10 +18,10 @@ import org.seasar.doma.jdbc.entity.NamingType;
 @Entity(naming = NamingType.LOWER_CASE, immutable = true)
 @Value(staticConstructor = "of")
 @Accessors(fluent = true)
-public class Member {
+public class Housework {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private final Id memberId;
+    private final Id houseworkId;
 
-    private final Name memberName;
+    private final Name houseworkName;
 }

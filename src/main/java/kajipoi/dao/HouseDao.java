@@ -1,8 +1,8 @@
-package com.kajipoi.dao;
+package kajipoi.dao;
 
-import com.kajipoi.domain.Id;
-import com.kajipoi.domain.Name;
-import com.kajipoi.entity.House;
+import kajipoi.domain.Id;
+import kajipoi.domain.Name;
+import kajipoi.entity.House;
 import org.seasar.doma.*;
 
 import java.util.List;

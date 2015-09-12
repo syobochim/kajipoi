@@ -1,6 +1,4 @@
-package com.kajipoi.domain;
-
-import jdk.internal.org.objectweb.asm.tree.analysis.Value;
+package kajipoi.domain;
 
 import java.math.BigInteger;
 

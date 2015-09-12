@@ -1,4 +1,4 @@
-package com.kajipoi.domain;
+package kajipoi.domain;
 
 import org.seasar.doma.Domain;
 

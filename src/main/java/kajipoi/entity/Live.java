@@ -1,16 +1,13 @@
-package com.kajipoi.entity;
+package kajipoi.entity;
 
-import com.kajipoi.domain.Id;
-import com.kajipoi.domain.Status;
+import kajipoi.domain.Id;
 import lombok.Value;
 import lombok.experimental.Accessors;
 import org.seasar.doma.Entity;
 import org.seasar.doma.jdbc.entity.NamingType;
 
-import java.time.LocalDate;
-
 /**
- * 仕事イベントを表すエンティティ。
+ * 居住イベントを表すエンティティ。
  *
  * @author syobochim
  * @since 1.0
@@ -18,9 +15,7 @@ import java.time.LocalDate;
 @Entity(naming = NamingType.LOWER_CASE, immutable = true)
 @Value(staticConstructor = "of")
 @Accessors(fluent = true)
-public class Work {
+public class Live {
+    private final Id houseId;
     private final Id memberId;
-    private final Id houseworkId;
-    private final LocalDate workData;
-    private final Status status;
 }
