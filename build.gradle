@@ -1,6 +1,11 @@
 apply plugin: 'java'
+apply plugin: 'kotlin'
 apply plugin: 'idea'
 apply plugin: 'war'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.6'
+}
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -18,5 +23,22 @@ dependencies {
     testCompile 'org.glassfish.jersey.test-framework:jersey-test-framework-core:2.19'
     testRuntime 'org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-jetty:2.19'
     testRuntime 'com.h2database:h2:1.4.187'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    compile 'com.google.dagger:dagger:2.0'
+    kapt 'com.google.dagger:dagger-compiler:2.0'
+    providedCompile 'org.glassfish:javax.annotation:10.0-b28'
+}
+buildscript {
+    ext.kotlin_version = '1.0.0-beta-1038'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
 }
 
