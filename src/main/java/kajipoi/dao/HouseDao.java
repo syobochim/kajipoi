@@ -1,7 +1,6 @@
 package kajipoi.dao;
 
 import kajipoi.domain.Id;
-import kajipoi.domain.Name;
 import kajipoi.entity.House;
 import org.seasar.doma.*;
 

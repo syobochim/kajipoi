@@ -1,4 +1,4 @@
-package kajipoi.entityJava
+package kajipoi.entity
 
 import kajipoi.domain.Id
 import org.seasar.doma.Entity
