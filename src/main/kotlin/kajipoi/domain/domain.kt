@@ -9,8 +9,8 @@ import java.util.*
  * @author syobochim
  * @since 1.0
  */
-@Domain(valueType = String::class)
-class Id(val value: String)
+@Domain(valueType = UUID::class)
+class Id(val value: UUID)
 
 /**
  * 名前をあわらすドメインクラス。
