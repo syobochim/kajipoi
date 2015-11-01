@@ -10,6 +10,5 @@ import org.seasar.doma.jdbc.entity.NamingType
  */
 @Entity(naming = NamingType.LOWER_CASE, immutable = true)
 class Work(val memberId: Id,
-           val houseId: Id,
-           val workData: Id,
+           val houseworkId: Id,
            val status: Status)
