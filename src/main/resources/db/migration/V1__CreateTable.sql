@@ -1,0 +1,26 @@
+create table HOUSE (
+  HOUSE_ID UUID not NULL,
+  HOUSE_NAME VARCHAR(100) not NULL
+);
+
+create table HOUSEWORK (
+  HOUSEWORK_ID UUID not NULL,
+  HOUSEWORD_NAME VARCHAR(100) not NULL
+);
+
+create table LIVE (
+  HOUSE_ID UUID not NULL,
+  MEMBER_ID UUID not NULL
+);
+
+create table MEMBER (
+  MEMBER_ID UUID not NULL,
+  MEMBER_NAME VARCHAR(100) not NULL
+);
+
+create table WORK (
+  MEMBER_ID UUID not NULL,
+  HOUSEWORK_ID UUID not NULL,
+  STATUS INTEGER not NULL,
+  WORK_DATE DATE not NULL
+);
