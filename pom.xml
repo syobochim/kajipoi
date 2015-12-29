@@ -68,7 +68,6 @@
         <artifactId>kotlin-maven-plugin</artifactId>
         <groupId>org.jetbrains.kotlin</groupId>
         <version>1.0.0-beta-4584</version>
-
         <executions>
           <execution>
             <id>compile</id>
