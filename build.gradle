@@ -35,7 +35,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.flywaydb:flyway-gradle-plugin:3.2.1"
         // fixme : 2か所も定義が必要なのかな？buildscriptの中だとどうなるかわからん
-        testRuntime 'com.h2database:h2:1.4.190'
+        classpath 'com.h2database:h2:1.4.190'
     }
 }
 sourceSets {
