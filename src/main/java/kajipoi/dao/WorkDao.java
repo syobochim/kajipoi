@@ -1,8 +1,10 @@
 package kajipoi.dao;
 
+import kajipoi.core.config.AppConfig;
 import kajipoi.domain.Id;
 import kajipoi.domain.Status;
 import kajipoi.entity.Work;
+import org.seasar.doma.Dao;
 import org.seasar.doma.Delete;
 import org.seasar.doma.Insert;
 import org.seasar.doma.Select;
@@ -10,6 +12,7 @@ import org.seasar.doma.Select;
 import java.time.LocalDate;
 import java.util.List;
 
+@Dao(config = AppConfig.class)
 public interface WorkDao {
 
     @Select

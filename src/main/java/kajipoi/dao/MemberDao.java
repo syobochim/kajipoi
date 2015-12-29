@@ -1,5 +1,6 @@
 package kajipoi.dao;
 
+import kajipoi.core.config.AppConfig;
 import kajipoi.domain.Id;
 import kajipoi.entity.Member;
 import org.seasar.doma.Dao;
@@ -9,7 +10,7 @@ import org.seasar.doma.Select;
 
 import java.util.List;
 
-@Dao
+@Dao(config = AppConfig.class)
 public interface MemberDao {
 
     @Select
