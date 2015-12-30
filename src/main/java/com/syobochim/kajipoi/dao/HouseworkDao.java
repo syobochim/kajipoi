@@ -1,7 +1,7 @@
 package com.syobochim.kajipoi.dao;
 
 import com.syobochim.kajipoi.core.config.AppConfig;
-import kajipoi.domain.Id;
+import com.syobochim.kajipoi.domain.Id;
 import com.syobochim.kajipoi.entity.Housework;
 import org.seasar.doma.Dao;
 import org.seasar.doma.Delete;
