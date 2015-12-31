@@ -3,4 +3,4 @@ SELECT
 FROM
   WORK
 WHERE
-  work_id = /* workId */1
+  member_id = /* memberId */1
