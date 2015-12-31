@@ -6,8 +6,8 @@ import java.util.*
 /**
  * Idを表すドメイン
  */
-@Domain(valueType = UUID::class)
-class Id(val value: UUID)
+@Domain(valueType = Int::class)
+class Id(val value: Int)
 
 /**
  * 名前をあわらすドメインクラス。
