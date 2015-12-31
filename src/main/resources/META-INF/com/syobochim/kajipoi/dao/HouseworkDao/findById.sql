@@ -3,4 +3,4 @@ SELECT
 FROM
   HOUSEWORK
 WHERE
-  housework_id = /* houseworkId */
+  housework_id = /* houseworkId */1
