@@ -8,6 +8,7 @@ import org.seasar.doma.Dao;
 import org.seasar.doma.Delete;
 import org.seasar.doma.Insert;
 import org.seasar.doma.Select;
+import org.seasar.doma.jdbc.Result;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -31,8 +32,8 @@ public interface WorkDao {
     List<Work> findAllByStatus(Status status);
 
     @Insert
-    int save(Work work);
+    Result<Work> save(Work work);
 
     @Delete
-    int delete(Work work);
+    Result<Work> delete(Work work);
 }

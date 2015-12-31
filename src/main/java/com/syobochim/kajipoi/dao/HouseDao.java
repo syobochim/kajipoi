@@ -4,6 +4,7 @@ import com.syobochim.kajipoi.core.config.AppConfig;
 import com.syobochim.kajipoi.domain.Id;
 import com.syobochim.kajipoi.entity.House;
 import org.seasar.doma.*;
+import org.seasar.doma.jdbc.Result;
 
 import java.util.List;
 
@@ -17,8 +18,8 @@ public interface HouseDao {
     House findById(Id houseId);
 
     @Insert
-    int save(House house);
+    Result<House> save(House house);
 
     @Delete
-    int delete(House house);
+    Result<House> delete(House house);
 }

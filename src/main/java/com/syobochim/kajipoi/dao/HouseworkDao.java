@@ -7,6 +7,7 @@ import org.seasar.doma.Dao;
 import org.seasar.doma.Delete;
 import org.seasar.doma.Insert;
 import org.seasar.doma.Select;
+import org.seasar.doma.jdbc.Result;
 
 import java.util.List;
 
@@ -20,8 +21,8 @@ public interface HouseworkDao {
     Housework findById(Id houseworkId);
 
     @Insert
-    int save(Housework housework);
+    Result<Housework> save(Housework housework);
 
     @Delete
-    int delete(Housework housework);
+    Result<Housework> delete(Housework housework);
 }

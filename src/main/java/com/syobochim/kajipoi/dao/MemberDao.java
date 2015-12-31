@@ -7,6 +7,7 @@ import org.seasar.doma.Dao;
 import org.seasar.doma.Delete;
 import org.seasar.doma.Insert;
 import org.seasar.doma.Select;
+import org.seasar.doma.jdbc.Result;
 
 import java.util.List;
 
@@ -20,8 +21,8 @@ public interface MemberDao {
     Member findById(Id memberId);
 
     @Insert
-    int save(Member member);
+    Result<Member> save(Member member);
 
     @Delete
-    int delete(Member member);
+    Result<Member> delete(Member member);
 }

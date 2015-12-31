@@ -7,6 +7,7 @@ import org.seasar.doma.Dao;
 import org.seasar.doma.Delete;
 import org.seasar.doma.Insert;
 import org.seasar.doma.Select;
+import org.seasar.doma.jdbc.Result;
 
 import java.util.List;
 
@@ -23,8 +24,8 @@ public interface LiveDao {
     Live findByMemberId(Id memberId);
 
     @Insert
-    int save(Live live);
+    Result<Live> save(Live live);
 
     @Delete
-    int delete(Live live);
+    Result<Live> delete(Live live);
 }
