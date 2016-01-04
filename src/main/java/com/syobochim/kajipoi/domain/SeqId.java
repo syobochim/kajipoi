@@ -9,7 +9,7 @@ import org.seasar.doma.Domain;
  */
 @Domain(valueType = Integer.class)
 public class SeqId {
-    private Integer value;
+    private final Integer value;
 
     public SeqId(Integer value) {
         this.value = value;

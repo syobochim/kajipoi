@@ -18,9 +18,9 @@ public class House {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private SeqId houseId;
+    private final SeqId houseId;
 
-    private Name houseName;
+    private final Name houseName;
 
     public House(SeqId houseId, Name houseName) {
         this.houseId = houseId;

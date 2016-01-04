@@ -1,7 +1,6 @@
 package com.syobochim.kajipoi.domain;
 
 import org.seasar.doma.Domain;
-import sun.jvm.hotspot.memory.LoaderConstraintEntry;
 
 import java.time.LocalDate;
 
@@ -13,7 +12,7 @@ import java.time.LocalDate;
 @Domain(valueType = LocalDate.class)
 public class WorkDate {
 
-    private LocalDate value;
+    private final LocalDate value;
 
     public WorkDate(LocalDate value) {
         this.value = value;

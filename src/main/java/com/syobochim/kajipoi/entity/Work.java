@@ -14,13 +14,13 @@ import org.seasar.doma.jdbc.entity.NamingType;
 @Entity(naming = NamingType.LOWER_CASE, immutable = true)
 public class Work {
 
-    private SeqId memberId;
+    private final SeqId memberId;
 
-    private SeqId houseworkId;
+    private final SeqId houseworkId;
 
-    private Status status;
+    private final Status status;
 
-    private WorkDate workDate;
+    private final WorkDate workDate;
 
     public Work(SeqId memberId, SeqId houseworkId, Status status, WorkDate workDate) {
         this.memberId = memberId;

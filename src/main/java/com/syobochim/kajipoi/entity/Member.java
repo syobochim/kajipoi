@@ -18,9 +18,9 @@ public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private SeqId memberId;
+    private final SeqId memberId;
 
-    private Name memberName;
+    private final Name memberName;
 
     public Member(SeqId memberId, Name memberName) {
         this.memberId = memberId;

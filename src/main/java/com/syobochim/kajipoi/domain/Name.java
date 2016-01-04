@@ -9,7 +9,7 @@ import org.seasar.doma.Domain;
  */
 @Domain(valueType = String.class)
 public class Name {
-    private String value;
+    private final String value;
 
     public Name(String value) {
         this.value = value;

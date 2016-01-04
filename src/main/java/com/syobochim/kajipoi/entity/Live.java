@@ -12,9 +12,9 @@ import org.seasar.doma.jdbc.entity.NamingType;
 @Entity(naming = NamingType.LOWER_CASE, immutable = true)
 public class Live {
 
-    private SeqId houseId;
+    private final SeqId houseId;
 
-    private SeqId memberId;
+    private final SeqId memberId;
 
     public Live(SeqId houseId, SeqId memberId) {
         this.houseId = houseId;

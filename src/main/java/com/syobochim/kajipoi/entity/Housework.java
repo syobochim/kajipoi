@@ -18,9 +18,9 @@ public class Housework {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private SeqId houseworkId;
+    private final SeqId houseworkId;
 
-    private Name houseworkName;
+    private final Name houseworkName;
 
     public Housework(SeqId houseworkId, Name houseworkName) {
         this.houseworkId = houseworkId;
