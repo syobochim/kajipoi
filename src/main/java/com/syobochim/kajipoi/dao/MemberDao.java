@@ -1,7 +1,7 @@
 package com.syobochim.kajipoi.dao;
 
 import com.syobochim.kajipoi.core.config.AppConfig;
-import com.syobochim.kajipoi.domain.Id;
+import com.syobochim.kajipoi.domain.SeqId;
 import com.syobochim.kajipoi.entity.Member;
 import org.seasar.doma.Dao;
 import org.seasar.doma.Delete;
@@ -18,7 +18,7 @@ public interface MemberDao {
     List<Member> findAll();
 
     @Select(ensureResult = true)
-    Member findById(Id memberId);
+    Member findById(SeqId memberId);
 
     @Insert
     Result<Member> save(Member member);

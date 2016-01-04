@@ -1,7 +1,7 @@
 package com.syobochim.kajipoi.dao;
 
 import com.syobochim.kajipoi.core.config.AppConfig;
-import com.syobochim.kajipoi.domain.Id;
+import com.syobochim.kajipoi.domain.SeqId;
 import com.syobochim.kajipoi.domain.Status;
 import com.syobochim.kajipoi.domain.WorkDate;
 import com.syobochim.kajipoi.entity.Work;
@@ -20,10 +20,10 @@ public interface WorkDao {
     List<Work> findAll();
 
     @Select(ensureResult = true)
-    Work findByMemberId(Id memberId);
+    Work findByMemberId(SeqId memberId);
 
     @Select(ensureResult = true)
-    Work findByHouseId(Id houseId);
+    Work findByHouseId(SeqId houseId);
 
     @Select
     List<Work> findAllByTerm(WorkDate fromDate, WorkDate toDate);

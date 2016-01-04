@@ -8,10 +8,10 @@ import org.seasar.doma.Domain;
  * @author syobochim
  */
 @Domain(valueType = Integer.class)
-public class Id {
+public class SeqId {
     private Integer value;
 
-    public Id(Integer value) {
+    public SeqId(Integer value) {
         this.value = value;
     }
 

@@ -1,7 +1,7 @@
 package com.syobochim.kajipoi.dao;
 
 import com.syobochim.kajipoi.core.config.AppConfig;
-import com.syobochim.kajipoi.domain.Id;
+import com.syobochim.kajipoi.domain.SeqId;
 import com.syobochim.kajipoi.entity.Live;
 import org.seasar.doma.Dao;
 import org.seasar.doma.Delete;
@@ -18,10 +18,10 @@ public interface LiveDao {
     List<Live> findAll();
 
     @Select(ensureResult = true)
-    Live findByHouseId(Id houseId);
+    Live findByHouseId(SeqId houseId);
 
     @Select(ensureResult = true)
-    Live findByMemberId(Id memberId);
+    Live findByMemberId(SeqId memberId);
 
     @Insert
     Result<Live> save(Live live);
