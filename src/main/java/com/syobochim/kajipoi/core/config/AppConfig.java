@@ -26,7 +26,7 @@ public class AppConfig implements Config {
     private AppConfig() {
         dialect = new H2Dialect();
         dataSource = new LocalTransactionDataSource(
-                "jdbc:h2:mem:tutorial;DB_CLOSE_DELAY=-1", "sa", null);
+                "jdbc:h2:file:./target/kajipoi;DB_CLOSE_DELAY=-1", "sa", null);
         transactionManager = new LocalTransactionManager(
                 dataSource.getLocalTransaction(getJdbcLogger()));
     }

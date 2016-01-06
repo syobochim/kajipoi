@@ -54,6 +54,26 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>1.4.190</version>
+      <scope>runtime</scope>
+    </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-maven-plugin</artifactId>
+        <version>3.2.1</version>
+        <configuration>
+          <url>jdbc:h2:file:./target/kajipoi</url>
+          <user>sa</user>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
