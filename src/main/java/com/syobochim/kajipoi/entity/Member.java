@@ -13,7 +13,7 @@ import org.seasar.doma.jdbc.entity.NamingType;
  *
  * @author syobochim
  */
-@Entity(naming = NamingType.LOWER_CASE, immutable = true)
+@Entity(naming = NamingType.SNAKE_LOWER_CASE, immutable = true)
 public class Member {
 
     @Id
