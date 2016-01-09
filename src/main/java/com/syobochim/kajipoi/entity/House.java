@@ -1,7 +1,6 @@
 package com.syobochim.kajipoi.entity;
 
 import com.syobochim.kajipoi.domain.Name;
-import com.syobochim.kajipoi.domain.SeqId;
 import org.seasar.doma.Entity;
 import org.seasar.doma.GeneratedValue;
 import org.seasar.doma.GenerationType;
@@ -18,16 +17,21 @@ public class House {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private final SeqId houseId;
+    private final Integer houseId;
 
     private final Name houseName;
 
-    public House(SeqId houseId, Name houseName) {
+    // 使わない
+    public House(Integer houseId, Name houseName) {
         this.houseId = houseId;
         this.houseName = houseName;
     }
 
-    public SeqId getHouseId() {
+    public House(Name houseName) {
+        this(null, houseName);
+    }
+
+    public Integer getHouseId() {
         return houseId;
     }
 

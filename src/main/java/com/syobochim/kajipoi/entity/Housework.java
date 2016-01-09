@@ -27,6 +27,10 @@ public class Housework {
         this.houseworkName = houseworkName;
     }
 
+    public Housework(Name houseworkName) {
+        this(null, houseworkName);
+    }
+
     public SeqId getHouseworkId() {
         return houseworkId;
     }

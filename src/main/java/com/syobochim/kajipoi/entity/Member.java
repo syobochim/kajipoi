@@ -27,6 +27,10 @@ public class Member {
         this.memberName = memberName;
     }
 
+    public Member(Name memberName) {
+        this(null, memberName);
+    }
+
     public SeqId getMemberId() {
         return memberId;
     }
