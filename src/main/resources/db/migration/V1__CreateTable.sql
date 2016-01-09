@@ -1,10 +1,10 @@
 create table HOUSE (
-  HOUSE_ID INT not NULL,
+  HOUSE_ID INT,
   HOUSE_NAME VARCHAR(100) not NULL
 );
 
 create table HOUSEWORK (
-  HOUSEWORK_ID INT not NULL,
+  HOUSEWORK_ID INT,
   HOUSEWORD_NAME VARCHAR(100) not NULL
 );
 
@@ -14,7 +14,7 @@ create table LIVE (
 );
 
 create table MEMBER (
-  MEMBER_ID INT not NULL,
+  MEMBER_ID INT,
   MEMBER_NAME VARCHAR(100) not NULL
 );
 
