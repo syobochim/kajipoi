@@ -1,6 +1,6 @@
 package com.syobochim.kajipoi.dao;
 
-import com.syobochim.kajipoi.core.config.AppConfig;
+import com.syobochim.kajipoi.core.config.DomaConfig;
 import com.syobochim.kajipoi.domain.Key;
 import com.syobochim.kajipoi.entity.House;
 import org.seasar.doma.Dao;
@@ -11,7 +11,7 @@ import org.seasar.doma.jdbc.Result;
 
 import java.util.List;
 
-@Dao(config = AppConfig.class)
+@Dao(config = DomaConfig.class)
 public interface HouseDao {
 
     @Select

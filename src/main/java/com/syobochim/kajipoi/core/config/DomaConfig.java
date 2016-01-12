@@ -14,8 +14,8 @@ import javax.sql.DataSource;
  * @author syobochim
  */
 @SingletonConfig
-public class AppConfig implements Config {
-    private static final AppConfig CONFIG = new AppConfig();
+public class DomaConfig implements Config {
+    private static final DomaConfig CONFIG = new DomaConfig();
 
     private final Dialect dialect;
 
@@ -23,7 +23,7 @@ public class AppConfig implements Config {
 
     private final TransactionManager transactionManager;
 
-    private AppConfig() {
+    private DomaConfig() {
         dialect = new H2Dialect();
         dataSource = new LocalTransactionDataSource(
                 "jdbc:h2:file:./target/kajipoi;DB_CLOSE_DELAY=-1", "sa", null);
@@ -46,7 +46,7 @@ public class AppConfig implements Config {
         return transactionManager;
     }
 
-    public static AppConfig singleton() {
+    public static DomaConfig singleton() {
         return CONFIG;
     }
 }
