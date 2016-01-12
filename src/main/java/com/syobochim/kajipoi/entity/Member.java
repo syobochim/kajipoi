@@ -1,7 +1,7 @@
 package com.syobochim.kajipoi.entity;
 
+import com.syobochim.kajipoi.domain.Key;
 import com.syobochim.kajipoi.domain.Name;
-import com.syobochim.kajipoi.domain.SeqId;
 import org.seasar.doma.Entity;
 import org.seasar.doma.GeneratedValue;
 import org.seasar.doma.GenerationType;
@@ -18,11 +18,11 @@ public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private final SeqId memberId;
+    private final Key<Member> memberId;
 
     private final Name memberName;
 
-    public Member(SeqId memberId, Name memberName) {
+    public Member(Key<Member> memberId, Name memberName) {
         this.memberId = memberId;
         this.memberName = memberName;
     }
@@ -31,7 +31,7 @@ public class Member {
         this(null, memberName);
     }
 
-    public SeqId getMemberId() {
+    public Key<Member> getMemberId() {
         return memberId;
     }
 

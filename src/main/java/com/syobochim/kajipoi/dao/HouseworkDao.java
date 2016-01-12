@@ -1,7 +1,7 @@
 package com.syobochim.kajipoi.dao;
 
 import com.syobochim.kajipoi.core.config.AppConfig;
-import com.syobochim.kajipoi.domain.SeqId;
+import com.syobochim.kajipoi.domain.Key;
 import com.syobochim.kajipoi.entity.Housework;
 import org.seasar.doma.Dao;
 import org.seasar.doma.Delete;
@@ -18,7 +18,7 @@ public interface HouseworkDao {
     List<Housework> findAll();
 
     @Select(ensureResult = true)
-    Housework findById(SeqId houseworkId);
+    Housework findById(Key<Housework> houseworkId);
 
     @Insert
     Result<Housework> save(Housework housework);

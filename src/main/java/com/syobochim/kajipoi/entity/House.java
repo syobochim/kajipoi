@@ -1,5 +1,6 @@
 package com.syobochim.kajipoi.entity;
 
+import com.syobochim.kajipoi.domain.Key;
 import com.syobochim.kajipoi.domain.Name;
 import org.seasar.doma.Entity;
 import org.seasar.doma.GeneratedValue;
@@ -17,12 +18,12 @@ public class House {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private final Integer houseId;
+    private final Key<House> houseId;
 
     private final Name houseName;
 
     // 使わない
-    public House(Integer houseId, Name houseName) {
+    public House(Key<House> houseId, Name houseName) {
         this.houseId = houseId;
         this.houseName = houseName;
     }
@@ -31,7 +32,7 @@ public class House {
         this(null, houseName);
     }
 
-    public Integer getHouseId() {
+    public Key<House> getHouseId() {
         return houseId;
     }
 

@@ -1,6 +1,6 @@
 package com.syobochim.kajipoi.entity;
 
-import com.syobochim.kajipoi.domain.SeqId;
+import com.syobochim.kajipoi.domain.Key;
 import com.syobochim.kajipoi.domain.Status;
 import com.syobochim.kajipoi.domain.WorkDate;
 import org.seasar.doma.Entity;
@@ -14,26 +14,26 @@ import org.seasar.doma.jdbc.entity.NamingType;
 @Entity(naming = NamingType.SNAKE_LOWER_CASE, immutable = true)
 public class Work {
 
-    private final SeqId memberId;
+    private final Key<Member> memberId;
 
-    private final SeqId houseworkId;
+    private final Key<Housework> houseworkId;
 
     private final Status status;
 
     private final WorkDate workDate;
 
-    public Work(SeqId memberId, SeqId houseworkId, Status status, WorkDate workDate) {
+    public Work(Key<Member> memberId, Key<Housework> houseworkId, Status status, WorkDate workDate) {
         this.memberId = memberId;
         this.houseworkId = houseworkId;
         this.status = status;
         this.workDate = workDate;
     }
 
-    public SeqId getMemberId() {
+    public Key<Member> getMemberId() {
         return memberId;
     }
 
-    public SeqId getHouseworkId() {
+    public Key<Housework> getHouseworkId() {
         return houseworkId;
     }
 

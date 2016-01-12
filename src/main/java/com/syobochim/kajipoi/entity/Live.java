@@ -1,6 +1,6 @@
 package com.syobochim.kajipoi.entity;
 
-import com.syobochim.kajipoi.domain.SeqId;
+import com.syobochim.kajipoi.domain.Key;
 import org.seasar.doma.Entity;
 import org.seasar.doma.jdbc.entity.NamingType;
 
@@ -12,20 +12,20 @@ import org.seasar.doma.jdbc.entity.NamingType;
 @Entity(naming = NamingType.SNAKE_LOWER_CASE, immutable = true)
 public class Live {
 
-    private final SeqId houseId;
+    private final Key<House> houseId;
 
-    private final SeqId memberId;
+    private final Key<Member> memberId;
 
-    public Live(SeqId houseId, SeqId memberId) {
+    public Live(Key<House> houseId, Key<Member> memberId) {
         this.houseId = houseId;
         this.memberId = memberId;
     }
 
-    public SeqId getHouseId() {
+    public Key<House> getHouseId() {
         return houseId;
     }
 
-    public SeqId getMemberId() {
+    public Key<Member> getMemberId() {
         return memberId;
     }
 }
