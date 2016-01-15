@@ -1,5 +1,5 @@
 SELECT
-  *
+  /*%expand*/*
 FROM
   LIVE
 WHERE

@@ -1,5 +1,5 @@
 SELECT
-  *
+  /*%expand*/*
 FROM
   WORK
 WHERE

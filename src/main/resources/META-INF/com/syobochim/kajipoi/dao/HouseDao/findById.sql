@@ -1,5 +1,5 @@
 SELECT
-  *
+  /*%expand*/*
 FROM
   HOUSE
 WHERE

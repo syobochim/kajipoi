@@ -23,6 +23,7 @@ public class HouseDaoTest {
             House house = new House(new Name("hoge"));
             Result<House> result = dao.save(house);
             House entity = result.getEntity();
+            dao.findAll().forEach(x -> System.out.println(x.getHouseId().getValue()));
         });
 
     }
